@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="400" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.KayitOlController">
+
+    <Label layoutX="169.0" layoutY="27.0" styleClass="label-title" text="KAYIT OL" />
+
+    <Label layoutX="50" layoutY="80" text="Ad:" />
+    <TextField fx:id="txtAd" layoutX="150" layoutY="75" prefWidth="200" />
+
+    <Label layoutX="50" layoutY="120" text="Soyad:" />
+    <TextField fx:id="txtSoyad" layoutX="150" layoutY="115" prefWidth="200" />
+
+    <Label layoutX="50" layoutY="160" text="E-Posta:" />
+    <TextField fx:id="txtEmail" layoutX="150" layoutY="155" prefWidth="200" />
+
+    <Label layoutX="50" layoutY="200" text="Telefon:" />
+    <TextField fx:id="txtTelefon" layoutX="150" layoutY="195" prefWidth="200" />
+
+    <Label layoutX="50" layoutY="240" text="Doğum Tarihi:" />
+    <DatePicker fx:id="dateDogumTarihi" layoutX="150" layoutY="235" prefWidth="200" />
+
+    <Label layoutX="50.0" layoutY="300.0" text="Şifre:" />
+    <PasswordField fx:id="txtSifre" layoutX="150.0" layoutY="295.0" prefWidth="200" />
+
+    <Label layoutX="50.0" layoutY="340.0" text="Şifre Tekrar:" />
+    <PasswordField fx:id="txtSifreTekrar" layoutX="150.0" layoutY="335.0" prefWidth="200" />
+
+    <Button fx:id="btnKayitOl" layoutX="113.0" layoutY="386.0" onAction="#handleKayitOl" prefHeight="40" prefWidth="200" styleClass="button" text="Kayıt Ol" />
+
+    <Button fx:id="btnGeri" layoutX="113.0" layoutY="443.0" onAction="#handleGeriDon" prefHeight="40" prefWidth="200" styleClass="button button-secondary" text="Geri Dön" />
+
+    <ImageView fitHeight="80" fitWidth="223.0" layoutX="89.0" layoutY="497.0">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+</AnchorPane>

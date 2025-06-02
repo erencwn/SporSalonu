@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AcilisEkraniController">
+
+    <ImageView fx:id="logoImageView" fitHeight="120.0" fitWidth="350.0" layoutX="160.0" layoutY="86.0" preserveRatio="true">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="154.0" layoutY="226.0" prefHeight="24.0" prefWidth="292.0" styleClass="label-title" text="SPOR SALONU OTOMASYONU">
+      <font>
+         <Font size="10.0" />
+      </font></Label>
+
+    <Button fx:id="btnKayitOl" layoutX="225.0" layoutY="293.0" onAction="#handleKayitOl" prefHeight="35.0" prefWidth="150.0" styleClass="button" text="Kayıt Ol" />
+
+    <Button fx:id="btnGirisYap" layoutX="225.0" layoutY="343.0" onAction="#handleGirisYap" prefHeight="35.0" prefWidth="150.0" styleClass="button" text="Giriş Yap" />
+
+    <Button fx:id="btnAdminGiris" layoutX="318.0" layoutY="415.0" onAction="#handleAdminGiris" prefHeight="35.0" prefWidth="128.0" styleClass="button button-secondary" text="Admin Girişi" />
+
+    <Button fx:id="btnAntrenorGiris" layoutX="154.0" layoutY="415.0" onAction="#handleAntrenorGiris" prefHeight="35.0" prefWidth="128.0" styleClass="button" text="Antrenör Girişi" />
+
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AntrenorYonetimController">
+    <children>
+        <TabPane prefHeight="600.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Antrenör Yönetimi">
+                    <content>
+                        <AnchorPane prefHeight="599.0" prefWidth="850.0">
+
+                            <TextField fx:id="tf_ara" layoutX="568.0" layoutY="330.0" prefWidth="250.0" promptText="Ad veya Soyad ara..." />
+
+                            <TextField fx:id="tf_ad" layoutX="140.0" layoutY="39.0" prefWidth="210.0" />
+                            <TextField fx:id="tf_soyad" layoutX="140.0" layoutY="74.0" prefWidth="210.0" />
+                            <TextField fx:id="tf_email" layoutX="140.0" layoutY="109.0" prefWidth="210.0" />
+                            <TextField fx:id="tf_brans" layoutX="140.0" layoutY="144.0" prefWidth="210.0" />
+                            <DatePicker fx:id="dp_dogumTarihi" layoutX="140.0" layoutY="179.0" prefWidth="210.0" />
+                            <TextField fx:id="tf_telefon" layoutX="140.0" layoutY="224.0" prefWidth="210.0" />
+                            <PasswordField fx:id="pf_sifre" layoutX="140.0" layoutY="259.0" prefWidth="210.0" />
+                            <TextField fx:id="tf_foto" editable="false" layoutX="140.0" layoutY="293.0" prefWidth="210.0" />
+
+                            <Label layoutX="40.0" layoutY="43.0" text="Ad" />
+                            <Label layoutX="40.0" layoutY="78.0" text="Soyad" />
+                            <Label layoutX="40.0" layoutY="113.0" text="Email" />
+                            <Label layoutX="40.0" layoutY="148.0" text="Branş" />
+                            <Label layoutX="37.0" layoutY="188.0" text="Doğum Tarihi" />
+                            <Label layoutX="40.0" layoutY="228.0" text="Telefon" />
+                            <Label layoutX="40.0" layoutY="263.0" text="Şifre" />
+                            <Label layoutX="40.0" layoutY="299.0" text="Fotoğraf" />
+
+                            <ImageView fx:id="img_antrenor" fitHeight="160.0" fitWidth="160.0" layoutX="384.0" layoutY="120.0" preserveRatio="true" />
+
+                            <Button fx:id="bt_dosyaac" layoutX="383.0" layoutY="295.0" onAction="#handleFotoSec" prefHeight="25.0" prefWidth="162.0" text="Fotoğraf Seç" />
+                            <Button layoutX="40.0" layoutY="330.0" onAction="#handleEkle" prefWidth="100.0" text="Ekle" />
+                            <Button layoutX="150.0" layoutY="330.0" onAction="#handleGuncelle" prefWidth="100.0" text="Güncelle" />
+                            <Button layoutX="263.0" layoutY="330.0" onAction="#handleSil" prefWidth="100.0" text="Sil" />
+							<Button layoutX="740.0" layoutY="14.0" onAction="#handleGeriDon"
+        prefWidth="80.0" text="Geri Dön"
+        style="-fx-background-color: #d6d6d6; -fx-text-fill: black;" />
+                            
+                            <ScrollPane layoutX="18.0" layoutY="370.0" prefHeight="196.0" prefWidth="814.0">
+                                <content>
+                                    <TableView fx:id="tablo" fixedCellSize="30.0" prefHeight="400.0" prefWidth="796.0">
+                                        <columns>
+                                            <TableColumn fx:id="col_ad" prefWidth="100.0" text="Ad" />
+                                            <TableColumn fx:id="col_soyad" prefWidth="100.0" text="Soyad" />
+                                            <TableColumn fx:id="col_email" prefWidth="150.0" text="Email" />
+                                            <TableColumn fx:id="col_brans" prefWidth="100.0" text="Branş" />
+                                            <TableColumn fx:id="col_dogumTarihi" prefWidth="120.0" text="Doğum Tarihi" />
+                                            <TableColumn fx:id="col_telefon" prefWidth="100.0" text="Telefon" />
+                                            <TableColumn fx:id="col_sifre" prefWidth="100.0" text="Şifre" />
+                                            <TableColumn fx:id="col_foto" prefWidth="150.0" text="Fotoğraf" />
+                                        </columns>
+                                    </TableView>
+                                </content>
+                            </ScrollPane>
+                     <ImageView fitHeight="125.0" fitWidth="250.0" layoutX="568.0" layoutY="136.0">
+                        <image>
+                           <Image url="@../images/proje-logo.png" />
+                        </image>
+                     </ImageView>
+
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

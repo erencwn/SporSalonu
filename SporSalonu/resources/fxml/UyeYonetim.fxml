@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.UyeYonetimController"
+            prefWidth="1024.0" prefHeight="720.0">
+
+    <children>
+
+        <HBox alignment="TOP_RIGHT" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="0" left="0"/>
+            </padding>
+            <Button text="Geri Dön" onAction="#handleGeriDon"
+                    style="-fx-background-color: #bdc3c7; -fx-text-fill: black; -fx-font-weight: bold;"
+                    prefWidth="100" />
+        </HBox>
+
+        <VBox spacing="25" alignment="TOP_CENTER"
+              AnchorPane.topAnchor="60.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="10.0">
+
+            <TextField fx:id="tf_ara" promptText="Üye Ara..." prefWidth="500" maxWidth="500"/>
+
+		<VBox spacing="20" styleClass="card2" maxWidth="500" alignment="CENTER">
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <HBox spacing="10">
+                        <Label text="Ad" prefWidth="100"/>
+                        <TextField fx:id="tf_ad" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Soyad" prefWidth="100"/>
+                        <TextField fx:id="tf_soyad" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Email" prefWidth="100"/>
+                        <TextField fx:id="tf_email" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Telefon" prefWidth="100"/>
+                        <TextField fx:id="tf_telefon" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Şifre" prefWidth="100"/>
+                        <PasswordField fx:id="pf_sifre" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Doğum Tarihi" prefWidth="100"/>
+                        <DatePicker fx:id="dp_dogumTarihi" prefWidth="250"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Boy (cm)" prefWidth="100"/>
+                        <TextField fx:id="tf_boy" prefWidth="250"/>
+                    </HBox>
+                </VBox>
+
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Ekle" onAction="#handleEkle" prefWidth="120"/>
+                    <Button text="Güncelle" onAction="#handleGuncelle" prefWidth="120"/>
+                    <Button text="Sil" onAction="#handleSil" prefWidth="120"/>
+                    <Button text="Ödeme Yönetimi" onAction="#handleOdemeYonetimi" prefWidth="150"/>
+                </HBox>
+            </VBox>
+
+            <TableView fx:id="tablo" prefWidth="900" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="col_ad" text="Ad" prefWidth="100"/>
+                    <TableColumn fx:id="col_soyad" text="Soyad" prefWidth="100"/>
+                    <TableColumn fx:id="col_email" text="Email" prefWidth="200"/>
+                    <TableColumn fx:id="col_dogumTarihi" text="Doğum Tarihi" prefWidth="120"/>
+                    <TableColumn fx:id="col_telefon" text="Telefon" prefWidth="120"/>
+                    <TableColumn fx:id="col_sifre" text="Şifre" prefWidth="80"/>
+                    <TableColumn fx:id="col_boy" text="Boy" prefWidth="80"/>
+                    <TableColumn fx:id="col_odeme" text="Ödeme Durumu" prefWidth="120"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </children>
+</AnchorPane>

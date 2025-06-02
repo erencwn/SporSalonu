@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="400" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AdminGirisController">
+
+    <Label layoutX="153.0" layoutY="31.0" styleClass="label-title" text="ADMİN GİRİŞİ" />
+
+    <Label layoutX="50" layoutY="90" text="Admin Key:" />
+    <PasswordField fx:id="txtAdminKey" layoutX="150" layoutY="85" prefWidth="200" />
+
+    <Button fx:id="btnGiris" layoutX="100.0" layoutY="157.0" onAction="#handleAdminGiris" prefHeight="40" prefWidth="200" styleClass="button" text="Giriş Yap" />
+
+    <Button fx:id="btnGeri" layoutX="100.0" layoutY="205.0" onAction="#handleGeriDon" prefHeight="40" prefWidth="200" styleClass="button button-secondary" text="Geri Dön" />
+
+    <ImageView fitHeight="80" fitWidth="231.0" layoutX="84.0" layoutY="308.0">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+</AnchorPane>

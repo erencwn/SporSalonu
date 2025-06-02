@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom right, #ECE9E6, #FFFFFF);" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AdminEkraniController">
+
+    <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="56.0" layoutY="131.0">
+        <image>
+            <Image url="@../images/Personel - Antrenör List.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="btnAntrenorListesi" layoutX="42.0" layoutY="230.0" onAction="#handleAntrenorListesi" prefHeight="27.0" prefWidth="135.0" styleClass="button" text="Antrenör Yönetimi">
+        <tooltip>
+            <Tooltip text="Antrenörleri görüntüle ve düzenle!" />
+        </tooltip>
+    </Button>
+
+    <ImageView fitHeight="135.0" fitWidth="143.0" layoutX="421.0" layoutY="95.0">
+        <image>
+            <Image url="@../images/uye-yonetimi.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="btnUyeIslemleri" layoutX="425.0" layoutY="230.0" onAction="#handleUyeIslemleri" prefHeight="27.0" prefWidth="135.0" styleClass="button" text="Üye Yönetimi">
+        <tooltip>
+            <Tooltip text="Üye listesini görüntüle ve işlemleri yönet" />
+        </tooltip>
+    </Button>
+
+    <ImageView fitHeight="96.0" fitWidth="217.0" layoutX="184.0" layoutY="23.0">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="285.0" layoutY="297.0">
+        <image>
+            <Image url="@../images/cikis-yap.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="btnCikis" layoutX="274.0" layoutY="345.0" onAction="#handleCikis" prefHeight="27.0" prefWidth="67.0" styleClass="button button-secondary" text="Çıkış">
+        <tooltip>
+            <Tooltip text="Yönetici panelinden çıkış yap." />
+        </tooltip>
+    </Button>
+
+    <ImageView fitHeight="96.0" fitWidth="107.0" layoutX="254.0" layoutY="134.0">
+        <image>
+            <Image url="@../images/admin-odeme-yonetimi.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="btnOdemeYonetimi" layoutX="247.0" layoutY="230.0" onAction="#handleOdemeYonetimi" prefHeight="27.0" prefWidth="121.0" styleClass="button" text="Ödeme Yönetimi">
+        <tooltip>
+            <Tooltip text="Ödeme işlemlerini onayla ve görüntüle!" />
+        </tooltip>
+    </Button>
+
+</AnchorPane>

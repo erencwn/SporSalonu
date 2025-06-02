@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" 
+            xmlns="http://javafx.com/javafx/23.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="application.controllers.SifreSifirlaController"
+            stylesheets="@../css/application.css">
+    <children>
+        <VBox alignment="CENTER" layoutX="25.0" layoutY="25.0" spacing="10.0">
+            <Label text="E-Posta Adresinizi Girin:" />
+            <TextField fx:id="emailField" promptText="E-Posta adresiniz" prefWidth="250" />
+            <Button text="Şifreyi Sıfırla" onAction="#handleSifreSifirla" prefWidth="150" styleClass="button" />
+        </VBox>
+    </children>
+</AnchorPane>

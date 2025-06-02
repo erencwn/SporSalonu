@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0"
+            style="-fx-background-color: linear-gradient(to bottom right, #ECE9E6, #FFFFFF);"
+            stylesheets="@../css/application.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.controllers.OdemeYonetimiController">
+
+    <Label layoutX="20.0" layoutY="44.0" text="Başlangıç:" />
+    <DatePicker fx:id="filterDatePicker" layoutX="90.0" layoutY="33.0" prefHeight="39.0" prefWidth="150.0" />
+
+    <Label layoutX="260.0" layoutY="44.0" text="Bitiş:" />
+    <DatePicker fx:id="filterDatePicker2" layoutX="310.0" layoutY="33.0" prefHeight="39.0" prefWidth="150.0" />
+
+    <Button layoutX="470.0" layoutY="39.0" onAction="#handleFiltrele" text="Filtrele" />
+    <Button layoutX="560.0" layoutY="39.0" onAction="#handleSifirla" text="Sıfırla" />
+    <Button fx:id="btnGeriDon" layoutX="22.0" layoutY="513.0" onAction="#handleGeriDon"
+            style="-fx-background-color: #bdc3c7; -fx-font-weight: bold;" text="Geri Dön" />
+
+    <TableView fx:id="tableOdemeler" layoutX="20.0" layoutY="80.0" prefHeight="412.0" prefWidth="670.0">
+        <columns>
+            <TableColumn fx:id="colUyeAd" prefWidth="120" text="Üye Adı" />
+            <TableColumn fx:id="colTarih" prefWidth="100" text="Tarih" />
+            <TableColumn fx:id="colTutar" prefWidth="80" text="Tutar" />
+            <TableColumn fx:id="colYontem" prefWidth="80" text="Yöntem" />
+            <TableColumn fx:id="colDurum" prefWidth="90" text="Durum" />
+            <TableColumn fx:id="colDekont" prefWidth="80" text="Dekont" />
+            <TableColumn fx:id="colIslem" prefWidth="80" text="İşlem" />
+        </columns>
+    </TableView>
+
+    <PieChart fx:id="chartAylik" layoutX="730.0" layoutY="39.0" prefHeight="200.0" prefWidth="240.0"
+              title="Aylık Ödemeler Grafiği" />
+
+    <PieChart fx:id="chartYillik" layoutX="730.0" layoutY="247.0" prefHeight="200.0" prefWidth="240.0"
+              title="Yıllık Ödemeler Grafiği" />
+
+    <PieChart fx:id="chartToplam" layoutX="730.0" layoutY="459.0" prefHeight="200.0" prefWidth="240.0"
+              title="Toplam Ödemeler Grafiği" />
+
+    <ImageView fitHeight="144.0" fitWidth="333.0" layoutX="278.0" layoutY="526.0">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+</AnchorPane>

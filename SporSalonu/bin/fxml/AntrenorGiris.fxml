@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="400" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AntrenorGirisController">
+
+    <Label layoutX="140.0" layoutY="37.0" styleClass="label-title" text="ANTRENÖR GİRİŞİ" />
+
+    <Label layoutX="41.0" layoutY="112.0" text="E-Posta:" />
+    <TextField fx:id="txtEmail" layoutX="150.0" layoutY="107.0" prefWidth="200" />
+
+    <Label layoutX="50.0" layoutY="153.0" text="Şifre:" />
+    <PasswordField fx:id="txtSifre" layoutX="150.0" layoutY="148.0" prefWidth="200" />
+
+    <Button fx:id="btnGiris" layoutX="100.0" layoutY="212.0" onAction="#handleGirisYap" prefHeight="40" prefWidth="200" styleClass="button" text="Giriş Yap" />
+
+    <Button fx:id="btnGeri" layoutX="100.0" layoutY="262.0" onAction="#handleGeriDon" prefHeight="40" prefWidth="200" styleClass="button button-secondary" text="Geri Dön" />
+
+    <Button fx:id="btnSifreUnuttum" layoutX="100.0" layoutY="312.0" onAction="#handleSifreUnuttum" prefHeight="30" prefWidth="200" styleClass="hyperlink" text="Şifremi Unuttum?" />
+
+    <ImageView fitHeight="76.0" fitWidth="211.0" layoutX="95.0" layoutY="352.0">
+        <image>
+            <Image url="@../images/proje-logo.png" />
+        </image>
+    </ImageView>
+
+</AnchorPane>

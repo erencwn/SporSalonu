@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.KiloTakibiController"
+            stylesheets="@../css/BoyKiloTakip.css">
+
+    <top>
+        <HBox alignment="TOP_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Geri Dön" fx:id="btnGeriDon" onAction="#handleGeriDon" styleClass="button-secondary"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Üye Listesi" styleClass="label-title"/>
+            <ListView fx:id="lstUyeler" prefWidth="200"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <HBox fx:id="boxUyari" spacing="10" visible="false" managed="false">
+                <Label text="Bu üyenin boy bilgisi eksik." styleClass="label-warning"/>
+                <TextField fx:id="txtBoyGiris" promptText="Boy (cm)"/>
+                <Button fx:id="btnBoyKaydet" text="Boyu Kaydet" onAction="#handleBoyKaydet"/>
+            </HBox>
+
+            <VBox spacing="5">
+                <Label fx:id="lblUyeAdSoyad" text="Ad Soyad" styleClass="label-title"/>
+                <Label fx:id="lblDogumTarihi" text="Doğum Tarihi: -" styleClass="label-small"/>
+                <Label fx:id="lblBoy" text="Boy: -" styleClass="label-small"/>
+            </VBox>
+
+            <HBox spacing="8">
+                <Label text="Güncel KG:" styleClass="label-small"/>
+                <Label fx:id="lblGuncelKg" text="-" styleClass="label-small"/>
+
+                <Label text="Hedef KG:" styleClass="label-small"/>
+                <Label fx:id="lblHedefKg" text="-" styleClass="label-small"/>
+
+                <Label text="BMI:" styleClass="label-small"/>
+                <Label fx:id="lblBMI" text="-" styleClass="label-small"/>
+
+                <Label text="Hedef BMI:" styleClass="label-small"/>
+                <Label fx:id="lblHedefBMI" text="22.0" styleClass="label-small"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <VBox spacing="5">
+                    <Label text="Kilo"/>
+                    <TextField fx:id="txtKilo"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Yağ (kg)"/>
+                    <TextField fx:id="txtYag"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Kas (kg)"/>
+                    <TextField fx:id="txtKas"/>
+                </VBox>
+                <Button fx:id="btnVeriKaydet" text="Verileri Kaydet" onAction="#handleVeriKaydet"/>
+            </HBox>
+
+            <LineChart fx:id="lineChart" title="Vücut Takibi" prefHeight="300">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxis" label="Tarih"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxis" label="Değer"/>
+                </yAxis>
+            </LineChart>
+        </VBox>
+    </center>
+
+</BorderPane>
