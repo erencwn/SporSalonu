@@ -1,1 +1,1 @@
-![Proje Görseli](https://i.hizliresim.com/bdo9qwu.jpg)
+![MasterHead](https://i.hizliresim.com/bdo9qwu.jpg)
