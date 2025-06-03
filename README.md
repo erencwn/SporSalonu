@@ -25,7 +25,7 @@ Proje geliştirme sürecinden önce, JavaFX teknolojisi ve spor salonu otomasyon
 
 | 📌 Danışman Adı            | 👨‍🏫 Bölümü             |
 | -------------------------- | ------------------------ |
-| **Öğr. Gör. Naciye Macit SEZİKLİ** | Bilgisayar Programcılığı |
+| **Öğr. Gör. Naciye MACİT** | Bilgisayar Programcılığı |
 
 ---
 
@@ -62,7 +62,7 @@ Bu proje, 7 kişilik bir ekip çalışmasıyla hayata geçirilmiştir. Her bir e
 
 Projeyi klonlayın:
 
-```bash
+```
 git clone https://github.com/erencwn/SporSalonu.git
 ```
 
