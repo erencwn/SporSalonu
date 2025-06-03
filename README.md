@@ -61,6 +61,7 @@ Bu proje, 7 kişilik bir ekip çalışmasıyla hayata geçirilmiştir. Her bir e
 ## 📦 Kurulum ve Çalıştırma
 
 Projeyi klonlayın:
+
 `git clone https://github.com/erencwn/SporSalonu.git`
 
 * Eclipse veya benzeri bir IDE ile projeyi açın.
